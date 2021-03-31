@@ -2,48 +2,22 @@ using System;
 
 class MainClass {
 
-  public class Employee{
-    private string firstname;
-    private string lastname;
-    private string id;
-    private int age;
-    private string address;
-    private string title;
-    private double yearlysalary;
-    private string employmentstatus;
-
   
-  public Employee(){
-    firstname = "Unknown";
-    lastname = "Unknown";
-    id = "Unknown";
-    age = 0;
-    employmentstatus = "active";
-
-  }
-  public Employee(string Firstname, string Lastname, string Id, int Age){
-    firstname= Firstname;
-    lastname= Lastname;
-    id = Id;
-    age = Age;
-    employmentstatus= "active";
-
-  }
-  public void intro(){
-    Console.WriteLine(firstname);
-    Console.WriteLine(lastname);
-    Console.WriteLine(id);
-    Console.WriteLine(age);
-    Console.WriteLine(employmentstatus);
-  }
-  }
 
   
 public static void Main (string[] args) {
-  Employee Jack = new Employee(); 
-  Jack.intro();
-  Employee John = new Employee("john", "smith", "1234", 45);
-  John.intro();
-   
+  Employee Employee1 = new Employee(); 
+  Employee1.intro();
+  Employee Employee2 = new Employee("Robert", "Downey", "12321", 12,0);
+  Employee2.YearlySalary = 100;
+  Employee2.intro();
+  Employee Employee3 =new Employee("John", "Smith","S0089", 38,50000);
+  Employee3.intro();
+  Employee3.IncreaseSalary(-2);
+  Employee Employee4 = new Employee("Maria", "Lambert", "S0100",26,80000);
+  Employee4.intro();
+  Employee4.IncreaseSalary(7); 
+  Employee4.RemoveEmployee();
+  Employee4.RemoveEmployee();
   }
 }
